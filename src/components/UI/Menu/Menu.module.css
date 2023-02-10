@@ -1,0 +1,73 @@
+.menu {
+  position: relative;
+  width: 20rem;
+  height: 64rem;
+  padding: 0 1.5rem;
+  box-shadow: 16px 0 52px 0 rgba(14, 24, 80, 0.2);
+  transition: 0.4s; }
+  .menuHide {
+    transform: translateX(-20rem); }
+  .menuIcons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    min-height: 100px; }
+  .menuFooter {
+    position: absolute;
+    bottom: 0; }
+    .menuFooterLanguages {
+      display: flex;
+      margin-top: 2.5rem;
+      margin-bottom: 2rem;
+      list-style-type: none; }
+    .menuFooterLanguage {
+      cursor: pointer; }
+    .menuFooterLanguage:not(.menuFooterLanguage:first-child) {
+      margin-left: 0.4375rem; }
+    .menuFooterIcon:not(.menuFooterIcon:first-child) {
+      margin-left: 1rem; }
+  .menuContacts {
+    display: flex;
+    flex-direction: column; }
+    .menuContactsMail {
+      margin-top: 1rem;
+      color: #1B1C21;
+      text-decoration: none; }
+    .menuContactsMail:hover {
+      text-decoration: underline; }
+    .menuContactsPhone {
+      margin-top: 0.75rem;
+      font-size: 24px;
+      font-weight: bold;
+      color: #1B1C21;
+      text-decoration: none;
+      cursor: pointer; }
+    .menuContactsPhone:hover {
+      text-decoration: underline; }
+  .menuLogo {
+    margin-left: -3rem; }
+  .menuList {
+    position: relative;
+    margin-top: 1.25rem;
+    list-style-type: none; }
+    .menuListItem {
+      color: #1B1C21;
+      cursor: pointer; }
+      .menuListItemActive {
+        color: #7E7E82; }
+    .menuListItem:not(.menuListItem:first-child) {
+      margin-top: 2rem; }
+
+.activeIndicator {
+  position: absolute;
+  top: -1rem;
+  left: -1.5rem;
+  width: 4px;
+  height: 2rem;
+  background: #41F6D7;
+  border-bottom-right-radius: 40%;
+  border-top-right-radius: 40%;
+  transition: 0.4s; }
+
+/*# sourceMappingURL=Menu.module.css.map */

@@ -1,0 +1,59 @@
+.fullPage {
+  display: flex; }
+
+.mainContent {
+  width: 78vw;
+  background: #F8F8F8;
+  transition: 0.4s; }
+
+.headerPage {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column; }
+  .headerPageMain {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2.625rem; }
+    .headerPageMainTitle {
+      display: flex; }
+    .headerPageMainButtons {
+      display: flex;
+      margin-right: 30px; }
+      .headerPageMainButtonsItem {
+        display: flex;
+        align-items: center;
+        cursor: pointer; }
+      .headerPageMainButtonsItem:not(.headerPageMainButtonsItem:last-child) {
+        margin-right: 2rem; }
+      .headerPageMainButtonsText {
+        margin-right: 8px; }
+  .headerPageNavigation {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    margin-left: 3.5rem; }
+    .headerPageNavigationContainerItem {
+      display: flex; }
+    .headerPageNavigationActiveItem {
+      display: flex;
+      align-items: center;
+      width: 200%;
+      height: 40px;
+      border: 2px solid #B8FFEC;
+      border-radius: 6px;
+      background-color: white; }
+      .headerPageNavigationActiveItemText {
+        visibility: visible; }
+    .headerPageNavigationItem {
+      cursor: pointer; }
+
+.indicatorPage {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 0.1875rem;
+  height: 2.5rem;
+  margin-right: 1.875rem; }
+
+/*# sourceMappingURL=Main.module.css.map */

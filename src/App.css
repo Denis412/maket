@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "TT Lakes Medium";
+}
+
+@font-face {
+  font-family: "TT Lakes";
+  font-style: normal;
+  font-weight: 400;
+  src: local("TT Lakes"), url("./assets/fonts/TTLakes/TTLakes-Medium.woff"), url("./assets/fonts/TTLakes/TTLakes-Bold.woff");
+}
+
+body {
+  position: relative;
+  height: 200vh;
+}
+
+.App {
+  display: flex;
+}
+
+.iconButton {
+
+  cursor: pointer;
+}

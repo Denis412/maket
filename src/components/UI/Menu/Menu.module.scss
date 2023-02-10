@@ -1,0 +1,122 @@
+.menu {
+  position: relative;
+  width: 20rem;
+  height: 64rem;
+
+  padding: 0 1.5rem;
+
+  box-shadow: 16px 0 52px 0 rgba(14, 24, 80, 0.2);
+
+  transition: 0.4s;
+
+  &Hide {
+    transform: translateX(-20rem);
+  }
+
+  &Icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    min-height: 100px;
+  }
+
+  &Footer {
+    position: absolute;
+    bottom: 0;
+
+    &Languages {
+      display: flex;
+      margin-top: 2.5rem;
+      margin-bottom: 2rem;
+
+      list-style-type: none;
+    }
+
+    &Language {
+      cursor: pointer;
+    }
+
+    &Language:not(&Language:first-child) {
+      margin-left: 0.4375rem;
+    }
+
+    &Icon:not(&Icon:first-child) {
+      margin-left: 1rem;
+    }
+  }
+
+  &Contacts {
+    display: flex;
+    flex-direction: column;
+
+    &Mail {
+      margin-top: 1rem;
+
+      color: #1B1C21;
+
+      text-decoration: none;
+    }
+
+    &Mail:hover {
+      text-decoration: underline;
+    }
+
+    &Phone {
+      margin-top: 0.75rem;
+
+      font-size: 24px;
+      font-weight: bold;
+
+      color: #1B1C21;
+
+      text-decoration: none;
+
+      cursor: pointer;
+    }
+
+    &Phone:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &Logo {
+    margin-left: -3rem;
+  }
+
+  &List {
+    position: relative;
+    margin-top: 1.25rem;
+    list-style-type: none;
+
+    &Item {
+      color: #1B1C21;
+
+      cursor: pointer;
+
+      &Active {
+        color: #7E7E82;
+      }
+    }
+
+    &Item:not(&Item:first-child) {
+      margin-top: 2rem;
+    }
+  }
+}
+
+.activeIndicator {
+  position: absolute;
+  top: -1rem;
+  left: -1.5rem;
+
+  width: 4px;
+  height: 2rem;
+
+  background: #41F6D7;
+  border-bottom-right-radius: 40%;
+  border-top-right-radius: 40%;
+
+  transition: 0.4s;
+}
