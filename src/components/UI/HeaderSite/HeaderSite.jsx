@@ -7,9 +7,10 @@ import checkStatusImg from "../../../assets/images/checkstatus.svg"
 
 import classes from "../Main/Main.module.css"
 import HeaderNavigation from "../HeaderNavigation/HeaderNavigation";
+import HeaderInformation from "../HeaderInformation/HeaderInformation";
 const HeaderSite = ({titlePage, activePage, setActivePage}) => {
     const [navigationItems, setNavigationItems] = useState([
-        {id: 1, title: "Рекомендуемые бренды", link: "#"},
+        {id: 1, title: "Ремонтируемые бренды", link: "#"},
         {id: 2, title: "Дополнительные услуги", link: "#"},
         {id: 3, title: "Цены на услуги", link: "#"},
         {id: 4, title: "Адреса сервисных центров", link: "#"},
@@ -19,16 +20,7 @@ const HeaderSite = ({titlePage, activePage, setActivePage}) => {
 
     return (
         <header className={classes.headerPage}>
-            <div className={classes.headerPageMain}>
-                <div className={classes.headerPageMainTitle}>
-                    <MenuActiveItemIndicator pageIndicator={true}/>
-                    <h1>{titlePage}</h1>
-                </div>
-                <div className={classes.headerPageMainButtons}>
-                    <TextImageButton text="Оставить заявку" srcImage={repairImg}/>
-                    <TextImageButton text="Статус ремонта" srcImage={checkStatusImg}/>
-                </div>
-            </div>
+            <HeaderInformation titlePage={titlePage}/>
             <HeaderNavigation
                 activePage={activePage}
                 setActivePage={setActivePage}

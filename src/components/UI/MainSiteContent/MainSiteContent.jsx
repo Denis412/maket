@@ -6,7 +6,10 @@ import HeaderSite from "../HeaderSite/HeaderSite";
 const MainSiteContent = ({hiddenMenu}) => {
     const [activePage, setActivePage] = useState(1);
     return (
-        <section className={hiddenMenu ? [classes.mainContent, cl.menuHide].join(' ') : classes.mainContent}>
+        <section className={hiddenMenu
+            ? [classes.mainContent, cl.menuHide].join(' ')
+            : classes.mainContent}
+        >
             <HeaderSite
                 activePage={activePage}
                 setActivePage={setActivePage}
