@@ -7,14 +7,14 @@ import checkStatusImg from "../../../assets/images/checkstatus.svg"
 
 import classes from "../Main/Main.module.css"
 import HeaderNavigation from "../HeaderNavigation/HeaderNavigation";
-const HeaderSite = ({titlePage}) => {
+const HeaderSite = ({titlePage, activePage, setActivePage}) => {
     const [navigationItems, setNavigationItems] = useState([
         {id: 1, title: "Рекомендуемые бренды", link: "#"},
-        {id: 1, title: "Дополнительные услуги", link: "#"},
-        {id: 1, title: "Цены на услуги", link: "#"},
-        {id: 1, title: "Адреса сервисных центров", link: "#"},
-        {id: 1, title: "Специальные цены", link: "#"},
-        {id: 1, title: "Отзывы", link: "#"},
+        {id: 2, title: "Дополнительные услуги", link: "#"},
+        {id: 3, title: "Цены на услуги", link: "#"},
+        {id: 4, title: "Адреса сервисных центров", link: "#"},
+        {id: 5, title: "Специальные цены", link: "#"},
+        {id: 6, title: "Отзывы", link: "#"},
     ]);
 
     return (
@@ -29,7 +29,11 @@ const HeaderSite = ({titlePage}) => {
                     <TextImageButton text="Статус ремонта" srcImage={checkStatusImg}/>
                 </div>
             </div>
-            <HeaderNavigation navigationItems={navigationItems}/>
+            <HeaderNavigation
+                activePage={activePage}
+                setActivePage={setActivePage}
+                navigationItems={navigationItems}
+            />
         </header>
     );
 };

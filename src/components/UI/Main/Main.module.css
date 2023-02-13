@@ -34,17 +34,22 @@
     margin-top: 1rem;
     margin-left: 3.5rem; }
     .headerPageNavigationContainerItem {
-      display: flex; }
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .headerPageNavigationContainerItemText {
+        padding: 0.5rem 1.375rem;
+        visibility: visible;
+        cursor: pointer; }
     .headerPageNavigationActiveItem {
       display: flex;
       align-items: center;
-      width: 200%;
       height: 40px;
       border: 2px solid #B8FFEC;
       border-radius: 6px;
-      background-color: white; }
-      .headerPageNavigationActiveItemText {
-        visibility: visible; }
+      background-color: white;
+      cursor: pointer; }
     .headerPageNavigationItem {
       cursor: pointer; }
 
