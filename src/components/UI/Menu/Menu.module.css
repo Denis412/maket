@@ -47,8 +47,6 @@
       cursor: pointer; }
     .menuContactsPhone:hover {
       text-decoration: underline; }
-  .menuLogo {
-    margin-left: -3rem; }
   .menuList {
     position: relative;
     margin-top: 1.25rem;
