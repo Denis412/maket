@@ -17,7 +17,6 @@
 
 body {
   position: relative;
-  /*//height: 200vh;*/
 }
 
 .App {
@@ -28,4 +27,10 @@ body {
   cursor: pointer;
 
   transition: 0.4s;
+}
+
+@media (max-width: 768px) {
+  body {
+    max-width: 768px;
+  }
 }

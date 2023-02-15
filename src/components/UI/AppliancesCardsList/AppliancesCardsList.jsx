@@ -2,9 +2,11 @@ import React from 'react';
 import classes from "../Main/Main.module.css";
 import SiteCard from "../SiteCard/SiteCard";
 
-const AppliancesCardsList = ({cardsAppliances}) => {
+const AppliancesCardsList = ({cardsAppliances, showAll}) => {
     return (
-        <ul className={classes.cardsList}>
+        <ul className={showAll
+            ? [classes.cardsList, classes.showMaxContent].join(' ')
+            : classes.cardsList}>
             {cardsAppliances.map(card =>
                 <SiteCard
                     key={card.id}

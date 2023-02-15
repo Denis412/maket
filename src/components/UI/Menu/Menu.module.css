@@ -4,9 +4,10 @@
   left: 0;
   overflow-y: auto;
   min-width: 20rem;
-  min-height: 200vh;
   padding: 0 1.5rem;
   transition: 0.4s; }
+  .menuHiddenIcon {
+    display: none; }
   .menuHide {
     transform: translateX(-20rem); }
   .menuIcons {
@@ -47,8 +48,6 @@
       cursor: pointer; }
     .menuContactsPhone:hover {
       text-decoration: underline; }
-  .menuLogo {
-    margin-left: -3rem; }
   .menuList {
     position: relative;
     margin-top: 1.25rem;
@@ -59,7 +58,7 @@
       .menuListItemActive {
         color: #7E7E82; }
     .menuListItem:not(.menuListItem:first-child) {
-      margin-top: 2rem; }
+      margin-top: 1.75rem; }
 
 .activeIndicator {
   position: absolute;
@@ -71,5 +70,66 @@
   border-bottom-right-radius: 40%;
   border-top-right-radius: 40%;
   transition: 0.4s; }
+
+.header {
+  display: none;
+  width: 100%;
+  min-height: 5.5rem; }
+
+@media (max-width: 768px) and (min-width: 361px) {
+  .menu {
+    display: none;
+    max-height: 64rem;
+    transform: translateX(-20rem); }
+    .menuHiddenIcon {
+      display: flex; }
+    .menuLogo {
+      margin-left: -3rem; }
+    .menuListItem:not(.menuListItem:first-child) {
+      margin-top: 2rem; }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.5rem;
+    background: #FFFFFF; }
+    .headerSplit {
+      height: 2rem;
+      width: 2px;
+      margin: 0 0.25rem;
+      border-radius: 1px;
+      background: #EAEAEA; }
+    .headerLogo {
+      margin-left: 1rem; }
+    .headerIcon:not(.headerIcon:last-child) {
+      margin-right: 1rem; }
+    .headerHelpIcons {
+      padding-left: 1.25rem; }
+    .headerLeftSide {
+      display: flex;
+      align-items: center; }
+    .headerRightSide {
+      display: flex;
+      align-items: center; } }
+@media (max-width: 361px) {
+  .menu {
+    display: none;
+    min-width: 22.5rem;
+    max-height: 42.25rem;
+    transform: translateX(-22.5rem); }
+    .menuHiddenIcon {
+      display: flex; }
+    .menuLogo {
+      margin-left: -3rem; }
+    .menuList {
+      margin-top: 0.5rem; }
+      .menuListItem:not(.menuListItem:first-child) {
+        margin-top: 1.5rem; }
+    .menuFooterLanguages {
+      margin-top: 0.5rem; } }
+@media (max-width: 321px) {
+  .menu {
+    min-width: 20rem; } }
 
 /*# sourceMappingURL=Menu.module.css.map */

@@ -22,8 +22,21 @@ import AppliancesCardsList from "../AppliancesCardsList/AppliancesCardsList";
 import ServicePricesTable from "../ServicePricesTable/ServicePricesTable";
 import TextImageButton from "../TextImageButton/TextImageButton";
 import FooterSite from "../FooterSite/FooterSite";
+import Header from "../Header/Header";
+import ShowHideTextButton from "../ShowHideTextButton/ShowHideTextButton";
 
 const MainSiteContent = ({hiddenMenu}) => {
+    const [showCompanies, setShowCompanies] = useState(false);
+    const [showAppliances, setShowAppliances] = useState(false);
+
+    const setShowAllCompanies = () => {
+        setShowCompanies(prev => !prev);
+    }
+
+    function setShowAllAppliances () {
+        setShowAppliances(prev => !prev);
+    }
+
     const [chapters, setChapter] = useState([
         {id: 1, title: "РЕМОНТ РАЗЛИЧНЫХ БРЕНДОВ", content:
                 <>
@@ -36,12 +49,15 @@ const MainSiteContent = ({hiddenMenu}) => {
                         {id: 6, srcImg: hpLogo},
                         {id: 7, srcImg: acerLogo},
                         {id: 8, srcImg: sonyLogo},
-                    ]}/>
-                    <ImageTextButton
-                        className={classes.headerPageMainButtonsItemHover}
+                    ]} showAll={showCompanies}/>
+                    <ShowHideTextButton
+                        showText={showCompanies}
+                        setShowText={setShowAllCompanies}
                         style={{marginTop: "1.5rem"}}
+                        className={classes.headerPageMainButtonsItemHover}
                         srcImage={arrowImg}
-                        text="Показать все"
+                        textShow="Показать все"
+                        textHide="Скрыть"
                     />
                 </>},
         {id: 2, title: "РЕМОНТ РАЗЛИЧНЫХ ВИДОВ ТЕХНИКИ", content:
@@ -51,12 +67,15 @@ const MainSiteContent = ({hiddenMenu}) => {
                         {id: 2, title: "Ремонт планшетов"},
                         {id: 3, title: "Ремонт ПК"},
                         {id: 4, title: "Ремонт мониторов"},
-                    ]}/>
-                    <ImageTextButton
+                    ]} showAll={showAppliances}/>
+                    <ShowHideTextButton
+                        showText={showAppliances}
+                        setShowText={setShowAllAppliances}
                         className={classes.headerPageMainButtonsItemHover}
                         style={{marginTop: "1.5rem"}}
                         srcImage={arrowImg}
-                        text="Показать все"
+                        textShow="Показать все"
+                        textHide="Скрыть"
                     />
                 </>},
         {id: 3, title: "ЦЕНЫ НА УСЛУГИ", content:
@@ -86,6 +105,7 @@ const MainSiteContent = ({hiddenMenu}) => {
             ? [classes.mainContent, cl.menuHide].join(' ')
             : classes.mainContent}
         >
+            <Header />
             <div className={classes.mainContainer}>
                 <HeaderSite
                     activePage={activePage}

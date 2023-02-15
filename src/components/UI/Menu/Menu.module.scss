@@ -6,7 +6,7 @@
   overflow-y: auto;
 
   min-width: 20rem;
-  min-height: 200vh;
+  //min-height: 200vh;
 
   padding: 0 1.5rem;
 
@@ -16,6 +16,10 @@
 
   &ContentContainer {
     //height: 64rem;
+  }
+
+  &HiddenIcon {
+    display: none;
   }
 
   &Hide {
@@ -91,7 +95,7 @@
   }
 
   &Logo {
-    margin-left: -3rem;
+    //margin-left: -3rem;
   }
 
   &List {
@@ -110,8 +114,12 @@
     }
 
     &Item:not(&Item:first-child) {
-      margin-top: 2rem;
+      margin-top: 1.75rem;
     }
+
+    //&Item:not(&Item:first-child) {
+    //  margin-top: 2rem;
+    //}
   }
 }
 
@@ -128,4 +136,119 @@
   border-top-right-radius: 40%;
 
   transition: 0.4s;
+}
+
+.header {
+  display: none;
+
+  width: 100%;
+  min-height: 5.5rem;
+}
+
+@media (max-width: 768px) and (min-width: 361px) {
+  .menu {
+    display: none;
+    max-height: 64rem;
+
+    transform: translateX(-20rem);
+
+    &HiddenIcon {
+      display: flex;
+    }
+
+    &Logo {
+      margin-left: -3rem;
+    }
+
+    &List {
+
+      &Item:not(&Item:first-child) {
+        margin-top: 2rem;
+      }
+    }
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 1.5rem;
+
+    background: #FFFFFF;
+
+    &Split {
+      height: 2rem;
+      width: 2px;
+
+      margin: 0 0.25rem;
+
+      border-radius: 1px;
+
+      background: #EAEAEA;
+    }
+
+    &Logo {
+      margin-left: 1rem;
+    }
+
+    &Icon:not(&Icon:last-child) {
+      margin-right: 1rem;
+    }
+
+    &HelpIcons {
+      padding-left: 1.25rem;
+    }
+
+    &LeftSide {
+      display: flex;
+      align-items: center;
+    }
+
+    &RightSide {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+@media (max-width: 361px) {
+  .menu {
+    display: none;
+
+    min-width: 22.5rem;
+    max-height: 42.25rem;
+
+    transform: translateX(-22.5rem);
+
+    &HiddenIcon {
+      display: flex;
+    }
+
+    &Logo {
+      margin-left: -3rem;
+    }
+
+    &List {
+
+      margin-top: 0.5rem;
+
+      &Item:not(&Item:first-child) {
+        margin-top: 1.5rem;
+      }
+    }
+
+    &Footer {
+
+      &Languages {
+        margin-top: 0.5rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 321px) {
+  .menu {
+    min-width: 20rem;
+  }
 }

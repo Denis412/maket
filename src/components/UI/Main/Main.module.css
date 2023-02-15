@@ -12,15 +12,32 @@
   transition: 0.4s; }
   .mainContentInformationSite {
     display: flex;
+    justify-content: space-between;
     min-height: 10rem;
     margin-top: 0.5rem; }
+    .mainContentInformationSiteContainerImage {
+      display: flex;
+      align-items: center; }
     .mainContentInformationSiteLeftSide {
+      display: flex;
+      flex-direction: column;
       margin-right: 2rem; }
-      .mainContentInformationSiteLeftSide p:not(.mainContentInformationSiteLeftSidep:first-child) {
+      .mainContentInformationSiteLeftSideText {
+        display: flex;
+        flex-wrap: wrap;
+        max-height: 10rem;
+        overflow-y: hidden;
+        transition: 0.4s; }
+      .mainContentInformationSiteLeftSide p:not(.mainContentInformationSiteLeftSide p:first-child) {
         margin-top: 2rem; }
     .mainContentInformationSiteImage {
-      width: 530px;
+      height: 100%;
+      max-width: 540px;
       border-radius: 6px; }
+
+.showMaxContent {
+  transition: 0.4s;
+  max-height: max-content; }
 
 .headerPage {
   display: flex;
@@ -94,10 +111,14 @@
   .chapterContainer:not(.chapterContainer:first-child) {
     margin-top: 3.125rem; }
 
+.rotateImg {
+  transform: rotateX(180deg);
+  transition: 0.4s; }
+
 .cardsList {
   display: flex;
   flex-wrap: wrap;
-  overflow-x: auto;
+  max-height: 11.5rem;
   overflow-y: hidden; }
 
 .card {
@@ -118,7 +139,7 @@
   display: flex;
   align-items: center;
   min-width: 15rem;
-  min-height: 4rem; }
+  height: 4.5rem; }
 
 .applianceCard {
   min-width: 15rem;
@@ -220,5 +241,31 @@
     margin-left: -3.5rem;
     margin-right: -1.74rem;
     background: #D9FFF5; }
+
+@media (max-width: 768px) and (min-width: 361px) {
+  .mainContainer {
+    margin-left: 1.25rem; }
+
+  .card:not(.card:last-child) {
+    margin-right: 1rem; }
+
+  .companyCard {
+    min-width: 14rem; }
+
+  .headerPageMainButtons {
+    display: none; }
+  .headerPageNavigation {
+    flex-wrap: nowrap;
+    max-width: 45rem;
+    overflow-x: auto; }
+    .headerPageNavigationContainerItem {
+      min-width: max-content; }
+
+  .mainContent {
+    max-width: 768px; }
+    .mainContentInformationSite {
+      margin-top: 2rem; }
+      .mainContentInformationSiteImage {
+        max-width: 22.5rem; } }
 
 /*# sourceMappingURL=Main.module.css.map */
