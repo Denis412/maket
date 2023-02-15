@@ -1,10 +1,27 @@
 .fullPage {
-  display: flex; }
+  display: flex;
+  height: 200vh; }
+
+.mainContainer {
+  margin-left: 3.5rem;
+  margin-right: 1.74rem; }
 
 .mainContent {
   width: 78vw;
   background: #F8F8F8;
   transition: 0.4s; }
+  .mainContentInformationSite {
+    display: flex;
+    width: 100%;
+    min-height: 10rem;
+    margin-top: 0.5rem; }
+    .mainContentInformationSiteLeftSide {
+      margin-right: 2rem; }
+      .mainContentInformationSiteLeftSide p:not(.mainContentInformationSiteLeftSidep:first-child) {
+        margin-top: 2rem; }
+    .mainContentInformationSiteImage {
+      width: 530px;
+      border-radius: 6px; }
 
 .headerPage {
   display: flex;
@@ -18,12 +35,14 @@
     .headerPageMainTitle {
       display: flex; }
     .headerPageMainButtons {
-      display: flex;
-      margin-right: 30px; }
+      display: flex; }
       .headerPageMainButtonsItem {
         display: flex;
         align-items: center;
+        transition: 0.4s;
         cursor: pointer; }
+        .headerPageMainButtonsItemHover:hover {
+          transform: translateY(5px); }
       .headerPageMainButtonsItem:not(.headerPageMainButtonsItem:last-child) {
         margin-right: 2rem; }
       .headerPageMainButtonsText {
@@ -31,8 +50,7 @@
   .headerPageNavigation {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 1rem;
-    margin-left: 3.5rem; }
+    margin-top: 1rem; }
     .headerPageNavigationContainerItem {
       position: relative;
       display: flex;
@@ -53,12 +71,57 @@
     .headerPageNavigationItem {
       cursor: pointer; }
 
+.chapters {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem; }
+
+.chapterContainer {
+  width: 100%; }
+  .chapterContainerPageTitle {
+    display: flex;
+    align-items: center;
+    min-height: 3.5rem;
+    margin-left: -3.5rem;
+    margin-right: -1.74rem;
+    color: #7E7E82;
+    border-top: 1px solid #D9FFF5;
+    background: linear-gradient(90deg, #F8F8F8 0%, #FFFFFF 98.61%); }
+    .chapterContainerPageTitleText {
+      margin-left: 3.5rem; }
+  .chapterContainerPageContent {
+    margin-top: 0.5rem; }
+  .chapterContainer:not(.chapterContainer:first-child) {
+    margin-top: 3.125rem; }
+
+.companyCards {
+  display: flex;
+  flex-wrap: wrap;
+  overflow-x: auto;
+  overflow-y: hidden; }
+
+.companyCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 15rem;
+  min-height: 4rem;
+  margin-top: 1rem;
+  padding: 0 1rem;
+  border: 1px solid #EAEAEA;
+  border-radius: 6px;
+  background: #FFFFFF;
+  transition: 0.4s; }
+  .companyCard:hover {
+    transform: scale(1.025); }
+  .companyCard:not(.companyCard:last-child) {
+    margin-right: 2rem; }
+
 .indicatorPage {
   position: relative;
   top: 0;
-  left: 0;
+  left: -3.5rem;
   width: 0.1875rem;
-  height: 2.5rem;
-  margin-right: 1.875rem; }
+  height: 2.5rem; }
 
 /*# sourceMappingURL=Main.module.css.map */
