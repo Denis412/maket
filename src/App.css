@@ -12,6 +12,9 @@
   src: local("TT Lakes"), url("./assets/fonts/TTLakes/TTLakes-Medium.woff"), url("./assets/fonts/TTLakes/TTLakes-Bold.woff");
 }
 
+#root {
+}
+
 body {
   position: relative;
   /*//height: 200vh;*/
@@ -22,6 +25,7 @@ body {
 }
 
 .iconButton {
-
   cursor: pointer;
+
+  transition: 0.4s;
 }

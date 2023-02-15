@@ -13,8 +13,8 @@ const HeaderInformation = ({titlePage}) => {
                 <h1>{titlePage}</h1>
             </div>
             <div className={classes.headerPageMainButtons}>
-                <TextImageButton text="Оставить заявку" srcImage={repairImg}/>
-                <TextImageButton text="Статус ремонта" srcImage={checkStatusImg}/>
+                <TextImageButton className={classes.headerPageMainButtonsItem} text="Оставить заявку" srcImage={repairImg}/>
+                <TextImageButton className={classes.headerPageMainButtonsItem} text="Статус ремонта" srcImage={checkStatusImg}/>
             </div>
         </div>
     );

@@ -14,24 +14,29 @@ import acerLogo from "../../../assets/images/logos/Acer.svg"
 import viewSonicLogo from "../../../assets/images/logos/ViewSonic.svg"
 import sonyLogo from "../../../assets/images/logos/Sony.svg"
 import arrowImg from "../../../assets/images/icon.svg"
+import lineImg from "../../../assets/images/Line.svg"
 
 import CompanyCardsList from "../CompanyCardsList/CompanyCardsList";
 import ImageTextButton from "../ImageTextButton/ImageTextButton";
+import AppliancesCardsList from "../AppliancesCardsList/AppliancesCardsList";
+import ServicePricesTable from "../ServicePricesTable/ServicePricesTable";
+import TextImageButton from "../TextImageButton/TextImageButton";
+import FooterSite from "../FooterSite/FooterSite";
 
 const MainSiteContent = ({hiddenMenu}) => {
     const [chapters, setChapter] = useState([
         {id: 1, title: "РЕМОНТ РАЗЛИЧНЫХ БРЕНДОВ", content:
                 <>
                     <CompanyCardsList cardsCompanies={[
-                        {id: 1, srcLogo: lenovoLogo},
-                        {id: 3, srcLogo: samsungLogo},
-                        {id: 5, srcLogo: appleLogo},
-                        {id: 7, srcLogo: viewSonicLogo},
-                        {id: 2, srcLogo: boschLogo},
-                        {id: 4, srcLogo: hpLogo},
-                        {id: 6, srcLogo: acerLogo},
-                        {id: 8, srcLogo: sonyLogo},]}
-                    />
+                        {id: 1, srcImg: lenovoLogo},
+                        {id: 2, srcImg: samsungLogo},
+                        {id: 3, srcImg: appleLogo},
+                        {id: 4, srcImg: viewSonicLogo},
+                        {id: 5, srcImg: boschLogo},
+                        {id: 6, srcImg: hpLogo},
+                        {id: 7, srcImg: acerLogo},
+                        {id: 8, srcImg: sonyLogo},
+                    ]}/>
                     <ImageTextButton
                         className={classes.headerPageMainButtonsItemHover}
                         style={{marginTop: "1.5rem"}}
@@ -39,8 +44,40 @@ const MainSiteContent = ({hiddenMenu}) => {
                         text="Показать все"
                     />
                 </>},
-        {id: 2, title: "РЕМОНТ РАЗЛИЧНЫХ ВИДОВ ТЕХНИКИ", content: null},
-        {id: 3, title: "ЦЕНЫ НА УСЛУГИ", content: null},
+        {id: 2, title: "РЕМОНТ РАЗЛИЧНЫХ ВИДОВ ТЕХНИКИ", content:
+                <>
+                    <AppliancesCardsList cardsAppliances={[
+                        {id: 1, title: "Ремонт ноутбуков"},
+                        {id: 2, title: "Ремонт планшетов"},
+                        {id: 3, title: "Ремонт ПК"},
+                        {id: 4, title: "Ремонт мониторов"},
+                    ]}/>
+                    <ImageTextButton
+                        className={classes.headerPageMainButtonsItemHover}
+                        style={{marginTop: "1.5rem"}}
+                        srcImage={arrowImg}
+                        text="Показать все"
+                    />
+                </>},
+        {id: 3, title: "ЦЕНЫ НА УСЛУГИ", content:
+                <>
+                    <ServicePricesTable
+                        services={[
+                            {id: 1, title: 'Диагностика', price: 'Бесплатно', term: '30'},
+                            {id: 2, title: 'Замена дисплея', price: '1000 ₽', term: '30-120'},
+                            {id: 3, title: 'Замена полифонического динамика', price: '1000 ₽', term: '30-120'},
+                            {id: 4, title: 'Тестирование с выдачей технического заключения', price: '1000 ₽', term: '30-120'},
+                            {id: 5, title: 'Замена программного обеспечения', price: '1000 ₽', term: '30-120'},
+                        ]}
+                    />
+                    <p className={classes.serviceParagraph}>Все цены указаны с учетом НДС. Стоимость ремонта указана на единичную услугу.
+                        Для получения коммерческого предложения на постоянное обслуживание, оставьте заявку.</p>
+                    <TextImageButton
+                        className={["iconButton", classes.serviceButton].join(' ')}
+                        text="Получить коммерческое предложение"
+                        srcImage={lineImg}
+                    />
+                </>},
     ]);
     const [activePage, setActivePage] = useState(1);
 
@@ -57,6 +94,7 @@ const MainSiteContent = ({hiddenMenu}) => {
                 />
                 <InformationCompany />
                 <ChaptersPageList chapters={chapters}/>
+                <FooterSite />
             </div>
         </section>
     );

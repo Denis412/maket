@@ -10,9 +10,9 @@ const Menu = ({hiddenMenu, setHiddenMenu}) => {
         <section
             className={hiddenMenu ? [classes.menu, classes.menuHide].join(' ') : classes.menu}
         >
-            <MenuIcons onHideMenu={setHiddenMenu}/>
-            <MenuList/>
-            <MenuFooter/>
+                <MenuIcons onHideMenu={setHiddenMenu}/>
+                <MenuList/>
+                <MenuFooter/>
         </section>
     );
 };
