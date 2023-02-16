@@ -249,6 +249,9 @@
   .card:not(.card:last-child) {
     margin-right: 1rem; }
 
+  .applianceCard {
+    min-width: 14rem; }
+
   .companyCard {
     min-width: 14rem; }
 
