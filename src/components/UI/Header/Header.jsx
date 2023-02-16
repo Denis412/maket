@@ -10,23 +10,28 @@ import checkStatusImag from "../../../assets/images/checkstatus.svg"
 
 
 import classes from "../Menu/Menu.module.css"
-const Header = () => {
+import ImageButton from "../ImageButton/ImageButton";
+const Header = ({setHiddenMenu}) => {
     const classNames = ["iconButton", classes.headerIcon].join(' ');
     return (
         <div className={classes.header}>
             <div className={classes.headerLeftSide}>
-                <img className={classNames} src={burgerMenuImg} alt=""/>
+                <ImageButton
+                    srcImg={burgerMenuImg}
+                    classNames={classNames}
+                    onClick={() => setHiddenMenu(false)}
+                />
                 <div className={classes.headerSplit}></div>
-                <img className={classes.headerLogo} src={logoImg} alt=""/>
+                <ImageButton srcImg={logoImg} classNames={classes.headerLogo}/>
             </div>
             <div className={classes.headerRightSide}>
-                <img className={classNames} src={phoneImg} alt=""/>
-                <img className={classNames} src={chatImg} alt=""/>
-                <img className={classNames} src={profileImg} alt=""/>
+                <ImageButton srcImg={phoneImg} classNames={classNames}/>
+                <ImageButton srcImg={chatImg} classNames={classNames}/>
+                <ImageButton srcImg={profileImg} classNames={classNames}/>
                 <div className={classes.headerSplit}></div>
                 <div className={classes.headerHelpIcons}>
-                    <img className={classNames} src={repairImg} alt=""/>
-                    <img className={classNames} src={checkStatusImag} alt=""/>
+                    <ImageButton srcImg={repairImg} classNames={classNames}/>
+                    <ImageButton srcImg={checkStatusImag} classNames={classNames}/>
                 </div>
             </div>
         </div>

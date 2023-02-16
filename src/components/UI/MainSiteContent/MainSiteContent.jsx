@@ -17,7 +17,6 @@ import arrowImg from "../../../assets/images/icon.svg"
 import lineImg from "../../../assets/images/Line.svg"
 
 import CompanyCardsList from "../CompanyCardsList/CompanyCardsList";
-import ImageTextButton from "../ImageTextButton/ImageTextButton";
 import AppliancesCardsList from "../AppliancesCardsList/AppliancesCardsList";
 import ServicePricesTable from "../ServicePricesTable/ServicePricesTable";
 import TextImageButton from "../TextImageButton/TextImageButton";
@@ -25,7 +24,7 @@ import FooterSite from "../FooterSite/FooterSite";
 import Header from "../Header/Header";
 import ShowHideTextButton from "../ShowHideTextButton/ShowHideTextButton";
 
-const MainSiteContent = ({hiddenMenu}) => {
+const MainSiteContent = ({hiddenMenu, setHiddenMenu}) => {
     const [showCompanies, setShowCompanies] = useState(false);
     const [showAppliances, setShowAppliances] = useState(false);
 
@@ -101,11 +100,9 @@ const MainSiteContent = ({hiddenMenu}) => {
     const [activePage, setActivePage] = useState(1);
 
     return (
-        <section className={hiddenMenu
-            ? [classes.mainContent, cl.menuHide].join(' ')
-            : classes.mainContent}
+        <section className={classes.mainContent}
         >
-            <Header />
+            <Header setHiddenMenu={setHiddenMenu}/>
             <div className={classes.mainContainer}>
                 <HeaderSite
                     activePage={activePage}

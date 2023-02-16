@@ -147,10 +147,14 @@
 
 @media (max-width: 768px) and (min-width: 361px) {
   .menu {
-    display: none;
-    max-height: 64rem;
+    position: absolute;
+    height: 64rem;
 
-    transform: translateX(-20rem);
+    background: #FFFFFF;
+
+    //transform: translateX(-20rem);
+
+    transition: all .4s ease;
 
     &HiddenIcon {
       display: flex;
@@ -210,6 +214,19 @@
       align-items: center;
     }
   }
+}
+
+.fog {
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+
+  opacity: 0.96;
+
+  background: #FFFFFF;
+
+  transition: 0.4s;
 }
 
 @media (max-width: 361px) {

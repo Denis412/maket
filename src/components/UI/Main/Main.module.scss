@@ -413,15 +413,14 @@
     margin-left: 1.25rem;
   }
 
-
-
   .card {
     &:not(&:last-child) {
       margin-right: 1rem;
     }
   }
 
-  .cardsList {
+  .applianceCard {
+    min-width: 14rem;
   }
 
   .companyCard {
