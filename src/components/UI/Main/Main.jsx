@@ -27,8 +27,8 @@ const Main = () => {
 
     return (
         <div className={classes.fullPage}>
-            <ModalWindow title="Обратная связь" content={<ModalFeedbackContent />}/>
-            <ModalWindow title="Заказать звонок" content={<ModalCallContent />}/>
+            <ModalWindow title="Обратная связь" side="left" content={<ModalFeedbackContent />}/>
+            <ModalWindow title="Заказать звонок" side="right" content={<ModalCallContent />}/>
             {/*<MediaQuery minWidth={769}>*/}
             {/*    <Menu hiddenMenu={hiddenMenu} setHiddenMenu={setHiddenMenu}/>*/}
             {/*</MediaQuery>*/}
