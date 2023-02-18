@@ -19,11 +19,13 @@ const Menu = ({hiddenMenu, setHiddenMenu}) => {
 
     return (
         <section
-            className={hiddenMenu ? [classes.menu, classes.menuHide].join(' ') : classes.menu}
+            className={hiddenMenu
+                ? [classes.menu, classes.menuHide].join(' ')
+                : [classes.menu, classes.menuShadow].join(' ')}
         >
-                <MenuIcons onHideMenu={setHiddenMenu}/>
-                <MenuList menuList={menuList}/>
-                <MenuFooter/>
+            <MenuIcons onHideMenu={setHiddenMenu}/>
+            <MenuList menuList={menuList}/>
+            <MenuFooter/>
         </section>
     );
 };

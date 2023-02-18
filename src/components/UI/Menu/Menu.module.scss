@@ -123,6 +123,10 @@
   }
 }
 
+.menuShadow {
+  box-shadow: 16px 0 52px rgba(14, 24, 80, 0.2);
+}
+
 .activeIndicator {
   position: absolute;
   top: -1rem;
@@ -136,6 +140,15 @@
   border-top-right-radius: 40%;
 
   transition: 0.4s;
+
+  &Modal {
+    top: 0;
+    left: -2rem;
+
+    width: 3px;
+    height: 2.5rem;
+
+  }
 }
 
 .header {

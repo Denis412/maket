@@ -242,6 +242,68 @@
     margin-right: -1.74rem;
     background: #D9FFF5; }
 
+.modalWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 27.5rem;
+  max-height: 58.75rem;
+  box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2); }
+
+.modalHeaderWrapper {
+  position: relative;
+  display: flex;
+  align-items: center; }
+
+.modalHeaderText {
+  font-size: 24px;
+  font-weight: bold; }
+
+.modalContentWrapper {
+  margin: 2rem; }
+
+.modalContent {
+  display: flex;
+  flex-direction: column; }
+  .modalContentInputsItemStandart {
+    width: 23.5rem;
+    min-height: 3rem;
+    padding-left: 1rem;
+    border: 1px solid #EAEAEA;
+    border-radius: 6px; }
+    .modalContentInputsItemStandart:focus {
+      outline: 1px solid #FF3E79; }
+    .modalContentInputsItemStandart:first-child {
+      margin-top: 1.5rem; }
+    .modalContentInputsItemStandart:not(.modalContentInputsItemStandart:first-child) {
+      margin-top: 1rem; }
+  .modalContentInputsItemBigHeight {
+    padding-top: 0.75rem;
+    min-height: 7.375rem;
+    resize: none; }
+
+.informationText {
+  font-size: 14px;
+  color: #7E7E82; }
+
+.informationLink {
+  text-decoration: none;
+  color: #FF3E79; }
+  .informationLink:hover {
+    text-decoration: underline; }
+
+.modalFooter {
+  margin-top: 1rem; }
+
+.modalButton {
+  min-width: 8.5rem; }
+
+.modalFormButtons {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin-top: 1.5rem; }
+
 @media (max-width: 768px) and (min-width: 361px) {
   .mainContainer {
     margin-left: 1.25rem; }

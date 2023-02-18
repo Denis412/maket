@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 import classes from "../Menu/Menu.module.css";
+import cl from "../Menu/Menu.module.css";
+
 import MenuItem from "../MenuItem/MenuItem";
 import MenuActiveItemIndicator from "../MenuActiveItemIndicator/MenuActiveItemIndicator";
 
@@ -22,7 +24,7 @@ const MenuList = ({menuList}) => {
                     onClick={onClickMenuItem}
                 />
             )}
-            <MenuActiveItemIndicator style={{top: `${3.375 * currentActiveItem - 0.375}rem`}}/>
+            <MenuActiveItemIndicator classNames={cl.activeIndicator} style={{top: `${3.375 * currentActiveItem - 0.375}rem`}}/>
         </ul>
     );
 };

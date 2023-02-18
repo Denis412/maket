@@ -3,11 +3,11 @@ import React from 'react';
 import classes from "../Menu/Menu.module.css"
 import cl from "../Main/Main.module.css"
 
-const MenuActiveItemIndicator = ({pageIndicator, ...props}) => {
+const MenuActiveItemIndicator = ({pageIndicator, classNames, ...props}) => {
     return (
         <div className={pageIndicator
-            ? [classes.activeIndicator, cl.indicatorPage].join(' ')
-            : classes.activeIndicator}
+            ? [classNames, cl.indicatorPage].join(' ')
+            : classNames}
              {...props}
         >
         </div>

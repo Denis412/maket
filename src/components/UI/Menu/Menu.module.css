@@ -60,6 +60,9 @@
     .menuListItem:not(.menuListItem:first-child) {
       margin-top: 1.75rem; }
 
+.menuShadow {
+  box-shadow: 16px 0 52px rgba(14, 24, 80, 0.2); }
+
 .activeIndicator {
   position: absolute;
   top: -1rem;
@@ -70,6 +73,11 @@
   border-bottom-right-radius: 40%;
   border-top-right-radius: 40%;
   transition: 0.4s; }
+  .activeIndicatorModal {
+    top: 0;
+    left: -2rem;
+    width: 3px;
+    height: 2.5rem; }
 
 .header {
   display: none;

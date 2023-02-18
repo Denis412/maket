@@ -13,6 +13,7 @@ import classes from "../Menu/Menu.module.css"
 import ImageButton from "../ImageButton/ImageButton";
 const Header = ({setHiddenMenu}) => {
     const classNames = ["iconButton", classes.headerIcon].join(' ');
+
     return (
         <div className={classes.header}>
             <div className={classes.headerLeftSide}>

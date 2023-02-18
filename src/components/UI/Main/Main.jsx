@@ -6,6 +6,9 @@ import classes from "./Main.module.css"
 import MainSiteContent from "../MainSiteContent/MainSiteContent";
 import Fog from "../Fog/Fog";
 import MediaQuery, {useMediaQuery} from "react-responsive";
+import ModalWindow from "../ModalWindow/ModalWindow";
+import ModalFeedbackContent from "../ModalFeedbackContent/ModalFeedbackContent";
+import ModalCallContent from "../ModalCallContent/ModalCallContent";
 
 const Main = () => {
     const [hiddenMenu, setHiddenMenu] = useState(true);
@@ -24,16 +27,18 @@ const Main = () => {
 
     return (
         <div className={classes.fullPage}>
-            <MediaQuery minWidth={769}>
-                <Menu hiddenMenu={hiddenMenu} setHiddenMenu={setHiddenMenu}/>
-            </MediaQuery>
+            <ModalWindow title="Обратная связь" content={<ModalFeedbackContent />}/>
+            <ModalWindow title="Заказать звонок" content={<ModalCallContent />}/>
+            {/*<MediaQuery minWidth={769}>*/}
+            {/*    <Menu hiddenMenu={hiddenMenu} setHiddenMenu={setHiddenMenu}/>*/}
+            {/*</MediaQuery>*/}
 
-            <MainSiteContent hiddenMenu={hiddenMenu} setHiddenMenu={setHiddenMenu}/>
+            {/*<MainSiteContent hiddenMenu={hiddenMenu} setHiddenMenu={setHiddenMenu}/>*/}
 
-            <MediaQuery maxWidth={768}>
-                <Fog visible={hiddenMenu} onClick={setHiddenMenu}/>
-                <Menu hiddenMenu={hiddenMenu} setHiddenMenu={setHiddenMenu}/>
-            </MediaQuery>
+            {/*<MediaQuery maxWidth={768}>*/}
+            {/*    <Fog visible={hiddenMenu} onClick={setHiddenMenu}/>*/}
+            {/*    <Menu hiddenMenu={hiddenMenu} setHiddenMenu={setHiddenMenu}/>*/}
+            {/*</MediaQuery>*/}
         </div>
     );
 };
